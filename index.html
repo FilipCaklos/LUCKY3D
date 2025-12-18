@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky3D Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="toolbar">
+            <button id="open-file">&#128193; Otvoriť súbor</button>
+            <button id="new-tab">&#10133; Nová karta</button>
+            <button id="toggle-wireframe">&#128194; Wireframe</button>
+            <button id="toggle-grid">&#9638; Mriežka</button>
+            <button id="reset-view">&#8635; Reset</button>
+            
+            <div class="separator"></div>
+            
+            <div class="button-group">
+                <label>Posun:</label>
+                <button id="move-x-pos">X+</button>
+                <button id="move-x-neg">X-</button>
+                <button id="move-y-pos">Y+</button>
+                <button id="move-y-neg">Y-</button>
+                <button id="move-z-pos">Z+</button>
+                <button id="move-z-neg">Z-</button>
+            </div>
+            
+            <div class="separator"></div>
+            
+            <div class="button-group">
+                <label>Otáčanie:</label>
+                <button id="rotate-x-pos">&#8593;X</button>
+                <button id="rotate-x-neg">&#8595;X</button>
+                <button id="rotate-y-pos">&#8593;Y</button>
+                <button id="rotate-y-neg">&#8595;Y</button>
+                <button id="rotate-z-pos">&#8593;Z</button>
+                <button id="rotate-z-neg">&#8595;Z</button>
+            </div>
+            
+            <div class="separator"></div>
+            
+            <div class="button-group">
+                <label>Veľkosť:</label>
+                <button id="scale-up">+</button>
+                <button id="scale-down">-</button>
+            </div>
+        </div>
+
+        <div id="tabs-container">
+            <div class="tab active" data-tab="0">
+                <span class="tab-name">Model 1</span>
+                <button class="tab-close">×</button>
+            </div>
+        </div>
+
+        <div id="viewport">
+            <div id="drop-zone">
+                <h1>Lucky3D Viewer</h1>
+                <p>Presuň STL alebo OBJ súbor sem</p>
+            </div>
+            
+            <div id="info-panel">
+                <h3>Informácie o modeli</h3>
+                <p><strong>Súbor:</strong> <span id="filename">Žiadny model</span></p>
+                <p><strong>Vrcholy:</strong> <span id="vertices">0</span></p>
+                <p><strong>Plochy:</strong> <span id="faces">0</span></p>
+                <p><strong>Rozmery:</strong> <span id="dimensions">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="renderer.js"></script>
+</body>
+</html>
