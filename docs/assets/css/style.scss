@@ -1,0 +1,104 @@
+---
+---
+@import "jekyll-theme-cayman";
+
+// Accent palette matching the app
+:root {
+  --accent: #00d4ff;
+  --accent-2: #00b8e6;
+  --bg-1: #0f2027;
+  --bg-2: #203a43;
+  --bg-3: #2c5364;
+  --text: #0b1220;
+}
+
+/* Header banner */
+.page-header {
+  background:
+    radial-gradient(800px 400px at 15% 15%, rgba(0, 212, 255, 0.08), transparent 60%),
+    radial-gradient(600px 350px at 85% 85%, rgba(0, 184, 255, 0.06), transparent 70%),
+    linear-gradient(135deg, var(--bg-1), var(--bg-2), var(--bg-3)) !important;
+  box-shadow: 0 10px 40px rgba(0, 212, 255, 0.18);
+}
+.page-header .project-name {
+  letter-spacing: 0.4px;
+  text-shadow: 0 0 18px rgba(0, 212, 255, 0.25);
+}
+.page-header .project-tagline {
+  opacity: 0.95;
+}
+
+/* Primary button */
+.btn {
+  background-image: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 212, 255, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.28s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 212, 255, 0.34);
+}
+
+/* Content area */
+.main-content {
+  max-width: 960px;
+  padding: 24px 22px;
+}
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+.main-content h2 {
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+}
+.main-content p { line-height: 1.75; }
+
+/* Links */
+a { color: var(--accent); }
+a:hover { color: var(--accent-2); }
+
+/* Inline code */
+code {
+  background: rgba(0, 212, 255, 0.12);
+  color: #0b1220;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+/* Code blocks */
+pre {
+  background: #0b1220;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.12);
+}
+pre code { color: #e6edf3; }
+
+/* Tables */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: 12px;
+}
+th, td { border: none; }
+th {
+  background: rgba(0, 212, 255, 0.12);
+}
+
+/* Lists spacing */
+ul, ol { margin: 0.8rem 0 1.2rem; }
+
+/* HR accent */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
